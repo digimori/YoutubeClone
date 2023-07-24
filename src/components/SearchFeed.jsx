@@ -1,9 +1,9 @@
 import React from 'react'
 
-const SearchTerm = () => {
+const SearchFeed = () => {
   return (
     <div>SearchTerm</div>
   )
 }
 
-export default SearchTerm
+export default SearchFeed
