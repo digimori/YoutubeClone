@@ -18,13 +18,10 @@ const Feed = () => {
         <Typography variant="h4" fontWeight="bold" mb={2} sx={{ color: '#fff' }}>
          New <span style={{ color: '#fc1503' }}>Videos</span>
         </Typography>
-        <Videos />
 
+        <Videos videos={[]}/>
 
       </Box>
-
-
-
     </Stack>
   )
 }
