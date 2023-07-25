@@ -1,18 +1,14 @@
 import axios from "axios";
 
-const axios = require('axios');
-
-const BASE_URL = 'https://youtube-v31.p.rapidapi.com/captions'; /* So in theory, we can env.js this, right? Secret keys? */
+const BASE_URL = 'https://youtube-v31.p.rapidapi.com'; /* So in theory, we can env.js this, right? Secret keys? */
 
 const options = {
   url: BASE_URL,
   params: {
-    maxResults: '50',
-    part: 'snippet',
-    videoId: 'M7FIvfx5J10'
+    maxResults: 50,
   },
   headers: {
-    'X-RapidAPI-Key': process.env.REACT_APP_RAPID_API_KEY,
+    'X-RapidAPI-Key': '20e0acb981msh280ffa3e9b90000p16a3c2jsndc30a8f07283',
     'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com'
   }
 };
