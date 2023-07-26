@@ -6,7 +6,8 @@ import { demoProfilePicture } from '../utils/constants';
 
 const ChannelCard = ({ channelDetail }) => {
   return (
-    <Box sx={{ boxShadow: 'none', borderRadius: '20px' }}>
+    <Box sx={{ boxShadow: 'none', borderRadius: '20px', display: 'flex', justifyContent: 'center', alignItems: 'center',
+               width: {xs: '356px', md: '320px'}, height: '326px', margin: 'auto' }}>
       <Link to={`/channel/${channelDetail?.id?.channelId}`}>
         <CardContent sx={{ display: 'flex', flexDirection: 'column', justifyContent:'center', textAlign:'center', color: '#fff'}}>
           <CardMedia image={channelDetail?.snippet?.thumbnails?.high?.url || demoProfilePicture} 
@@ -15,7 +16,12 @@ const ChannelCard = ({ channelDetail }) => {
         <Typography variant="h6" sx={{ color: '#fff',  }}>{channelDetail?.snippet?.title} 
         <CheckCircle sx={{ fontSize: 14, color: 'gray', ml: '5px' }} />
         </Typography>
-
+        {/* This is for the channel page itself as it's going to be dynamically rendered on there */}
+        {channelDetail?.statistics?.subscriberCount && (
+          <Typography>
+            {parseInt(channelDetail?.statistics?.subscriberCount).toLocaleString()} Subscribers
+          </Typography>
+        )}
         </CardContent>
       </Link>
 
